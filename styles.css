@@ -691,3 +691,54 @@ footer {
     flex-direction: column;
   }
 }
+/* ✅ Contactformulier styling */
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #6B705C;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background: #fff;
+  color: #333;
+}
+
+form select[multiple] {
+  height: 120px;
+}
+
+form .cta-button {
+  background-color: #A3B18A;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+form .cta-button:hover {
+  background-color: #6B705C;
+}
