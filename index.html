@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authentic Social Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <style>
+  h1, h2 {
+    color: #899871;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="diensten.html">Diensten</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="over.html">Over ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>  
+  </header>
+
+  <main class="main-background">
+    <section class="hero fade-in">
+      <h1>Welcome to Authentic Social Studio</h1>
+      <p>Creative marketing solutions that make an impact.</p>
+      <a href="diensten.html" class="cta-button">Discover Our Services</a>
+    </section>
+
+    <section class="content fade-in">
+      <h2>Our Services</h2>
+      <div class="diensten-overzicht">
+        <div class="dienst">
+          <img src="https://img.icons8.com/ios-filled/100/6B705C/code.png" alt="Webdesign icon" />
+          <h3>Web Design & Development</h3>
+          <p>Modern websites that convert and are user-friendly.</p>
+        </div>
+        <div class="dienst">
+          <img src="https://img.icons8.com/ios-filled/100/6B705C/video.png" alt="Video icon" />
+          <h3>Video Production</h3>
+          <p>Powerful videos with professional storytelling.</p>
+        </div>
+        <div class="dienst">
+          <img src="https://img.icons8.com/ios-filled/100/6B705C/instagram-new.png" alt="Social media icon" />
+          <h3>Social Media Strategy</h3>
+          <p>Striking campaigns and effective content planning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content fade-in">
+      <h2>Featured Projects</h2>
+      <div class="project-carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+        
+        <div class="project-carousel" id="projectCarousel">
+          <div class="project">
+            <h3>The Muses That Spark</h3>
+            <p>YouTube channel focused on podcasts. We provided branding, video visuals, and content strategy.</p>
+          </div>
+
+          <div class="project">
+            <h3>Off The Records</h3>
+            <p>For this music label, we handled video production, editing, and visual promotion.</p>
+            <button class="cta-button open-video">Watch Video</button>
+          </div>
+        </div>
+
+        <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+      </div>
+
+      <a href="portfolio.html" class="cta-button">View Portfolio</a>
+    </section>
+
+    <section class="content fade-in klanten-section">
+      <h2>Onze Klanten</h2>
+      <div class="klanten-wrapper">
+
+        <!-- The Muses That Spark -->
+        <div class="klantlogo"
+             data-name="The Muses That Spark"
+             data-info="Podcastkanaal over kunst, cultuur & creativiteit."
+             data-link="https://www.instagram.com/themusesthatspark">
+          <img src="channels4_profile.jpg" alt="TMS logo" />
+        </div>
+
+        <!-- Off The Records -->
+        <div class="klantlogo"
+             data-name="Off The Records"
+             data-info="Creatief muzieklabel met underground visuals."
+             data-link="https://www.instagram.com/offtharecords.nl?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <img src="420573147_3470838166580079_841011806176172528_n.jpg" alt="OTR logo" />
+        </div>
+        
+        <!-- Jerry Island -->
+        <div class="klantlogo"
+             data-name="Jerry Island"
+             data-info="Artiest met focus op sfeer, storytelling & visuele identiteit."
+             data-link="https://www.instagram.com/jerryisland?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <img src="464967733_523066627269094_4579805131459468534_n.jpg" alt="Jerry Island logo" />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>What Our Clients Say</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>“Authentic Social Studio completely transformed our YouTube channel! Their branding and visuals gave us a unique identity.”</p>
+          <strong>- The Muses That Spark</strong>
+        </div>
+        <div class="review">
+          <p>“The video they produced for our label was professional and exactly what we envisioned. Great collaboration!”</p>
+          <strong>- Off The Records</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Video Popup -->
+  <div id="popup-video" class="popup-overlay">
+    <div class="popup-content">
+      <button class="close-video">&times;</button>
+      <video controls>
+        <source src="SAV.mp4" type="video/mp4">
+        Your browser does not support this video.
+      </video>
+    </div>
+  </div>
+
+  <!-- ✅ Klantenpopup (hover) -->
+  <div id="klant-popup" class="popup-klant" data-popup="true">
+    <h3 id="klant-name"></h3>
+    <p id="klant-info"></p>
+    <a id="klant-link" href="#" target="_blank" class="popup-link">
+      <img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram" />
+    </a>
+  </div>
+
+  <section class="cta-section">
+    <h2>Make Your Brand Stand Out</h2>
+    <p>Ready to take your business to the next level? We help with strategy, design, and visibility.</p>
+    <a href="contact.html" class="cta-button">Start Your Project</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Authentic Social Studio. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/authentic.social.studio/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@authentic.social.studio" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/tiktok--v1.png" alt="TikTok" />
+      </a>
+      <!-- href="https://www.linkedin.com/in/youraccount" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" />
+      </a>-->
+    </div>
+  </footer>
+  
+</body>
+</html>

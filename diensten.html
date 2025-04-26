@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diensten - Authentic Social Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+<style>
+  
+  @keyframes floatingTitle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated-loop {
+  animation: floatingTitle 2.5s ease-in-out infinite;
+}
+
+  .hover-highlight {
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hover-highlight:hover {
+    color: #A3B18A;
+    transform: scale(1.05);
+  }
+
+  .highlight-animated {
+    color: #A3B18A;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .highlight-animated:hover {
+    transform: scale(1.1);
+  }
+  .flex-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1500px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.flex-block.reverse {
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.flex-image {
+  flex: 1 1 45%;
+}
+
+.flex-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.flex-image img:hover {
+  transform: scale(1.02);
+}
+
+.flex-image.shrink-image {
+  flex: 1 1 45%;
+  max-width: 100%;
+}
+
+
+.flex-image.shrink-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flex-text {
+  flex: 1 1 50%;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.flex-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #899871; /* ✅ nieuwe kleur */
+}
+
+
+
+.flex-text ul {
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.flex-text ul li::before {
+  content: "• ";
+  color: #A3B18A;
+  font-weight: bold;
+}
+.cta-section {
+  max-width: 1600px; /* Zelfde als flex-block */
+  margin: 4rem auto; /* Zelfde tussenruimte */
+  padding: 3rem;
+  background-image: url('Foto van de ik weet niet wat.webp'); /* vervang door jouw afbeelding */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* overlay zodat tekst leesbaar blijft */
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.cta-section h2,
+.cta-section p,
+.cta-section .cta-button {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.content {
+  max-width: 1500px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.letter-animated').forEach(element => {
+      const text = element.textContent.trim();
+      element.textContent = '';
+
+      text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.innerHTML = char === ' ' ? '&nbsp;' : char;
+        span.style.animationDelay = `${index * 0.05}s`;
+        element.appendChild(span);
+      });
+    });
+  });
+</script>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Diensten</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="over.html">Over ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-background" style="padding-top: 120px;">
+    <section class="content fade-in">
+      <h2 class="animated-loop" style="text-align: center; color: #7e846e;">
+        <span class="letter-animated" style="color: #899871;">Onze Diensten</span>
+      </h2>      
+<p style="max-width: 800px; margin: 1rem auto 0; text-align: center; font-size: 1.1rem; color: #444;">Bij Authentic Social Studio leveren we <span class="highlight-animated letter-animated hover-effect">creatieve</span> en <span class="highlight-animated letter-animated hover-effect">strategische</span> oplossingen die jouw merk versterken. Hieronder ontdek je onze kernexpertises.</p>
+    </section>
+
+    <!-- Video Productie -->
+    <section class="flex-block reverse fade-in">
+      <div class="flex-image shrink-image">
+        <img src="premium_photo-1661338857151-779ee51362c6.avif" alt="Video Productie Visual">
+      </div>
+      <div class="flex-text">
+        <h2 class="animated-loop"><span class="letter-animated" style="color: #899871;">Video Productie</span></h2>
+
+          Beelden zeggen meer dan duizend woorden. Wij produceren <span class="highlight-animated letter-animated hover-effect">krachtige</span> video's die <span class="highlight-animated letter-animated hover-effect">raken</span>. Voor brands, events en social media. Van <span class="highlight-animated letter-animated hover-effect">script</span> tot <span class="highlight-animated letter-animated hover-effect">edit</span>: wij brengen jouw <span class="highlight-animated letter-animated hover-effect">verhaal</span> tot leven met <span class="highlight-animated letter-animated hover-effect">cinematografische</span> kwaliteit.
+        </p>
+        <ul>
+          <li>Storytelling op maat</li>
+          <li>Professionele cameraopnames</li>
+          <li>Snelle edits met dynamische animaties</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Social Media Strategie -->
+    <section class="flex-block fade-in">
+      <div class="flex-image shrink-image">
+        <img src="social-strategy-concept-illustration_114360-724.jpg" alt="Social Media Strategie Visual">
+      </div>
+      <div class="flex-text">
+        <h2 class="animated-loop"><span class="letter-animated" style="color: #899871;">Social Media Strategie</span></h2>
+
+        <p>
+        </p>          Online <span class="highlight-animated letter-animated hover-effect">aanwezig</span> zijn is één ding. <span class="highlight-animated letter-animated hover-effect">Opgemerkt</span> worden is iets anders. Wij creëren <span class="highlight-animated letter-animated hover-effect">contentplannen</span> die passen bij jouw doelgroep en platform. Met oog voor <span class="highlight-animated letter-animated hover-effect">visuals</span>, <span class="highlight-animated letter-animated hover-effect">trends</span> en <span class="highlight-animated letter-animated hover-effect">conversie</span>.
+
+        <ul>
+          <li>Contentkalenders en planning</li>
+          <li>Design en copywriting afgestemd op merkidentiteit6</li>
+          <li>Analyse van data en optimalisatie</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Web Design -->
+    <section class="flex-block fade-in">
+      <div class="flex-image shrink-image">
+        <img src="istockphoto-1621460693-612x612.jpg" alt="Webdesign Visual">
+      </div>
+      <div class="flex-text">
+        <h2 class="animated-loop"><span class="letter-animated" style="color: #899871;">Web Design & Development</span></h2>
+        <p>
+          Jouw website is je <span class="highlight-animated letter-animated hover-effect">digitale</span> <span class="highlight-animated letter-animated hover-effect">visitekaartje</span>. Wij bouwen maatwerk webdesigns die niet alleen mooi ogen, maar ook resultaatgericht werken. Van <span class="highlight-animated letter-animated hover-effect">wireframes</span> tot geoptimaliseerde <span class="highlight-animated letter-animated hover-effect">performance</span>, elk <span class="highlight-animated letter-animated hover-effect">detail</span> telt.
+        </p>
+        <ul>
+          <li>Responsief design voor mobiel en desktop</li>
+          <li>Strategische UX/UI aanpak</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visuele afsluiting / CTA -->
+    <section class="cta-section">
+      <h2>Niet alleen zichtbaar. Onvergetelijk.</h2>
+      <p>Je merk verdient meer dan standaard. Het verdient impact, beleving en stijl. Laat je <span class="highlight-animated letter-animated hover-effect">strategie</span> tot leven komen met ons team van <span class="highlight-animated letter-animated hover-effect">creatieve geesten</span>.</p>
+      <a href="contact.html" class="cta-button">Plan een gratis kennismaking</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Authentic Social Studio. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/authentic.social.studio/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@authentic.social.studio" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/tiktok--v1.png" alt="TikTok" />
+      </a>
+      <!-- href="https://www.linkedin.com/in/youraccount" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" />
+      </a>-->
+    </div>
+  </footer>
+</body>
+</html>
